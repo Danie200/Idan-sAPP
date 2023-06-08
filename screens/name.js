@@ -1,4 +1,4 @@
-import { View,TouchableOpacity,Text,StyleSheet,Alert} from "react-native";
+import { View,TouchableOpacity,Text,StyleSheet,Alert,ImageBackground} from "react-native";
 import { SafeArea } from "../components/safearea";
 import * as SplashScreen from 'expo-splash-screen';
 import * as Font from 'expo-font';
@@ -18,6 +18,7 @@ const validationRules = yup.object({
 });
 
 export function Name ({navigation}) {
+  const image = {uri: 'https://images.pexels.com/photos/2092450/pexels-photo-2092450.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load'};
     const [appIsReady, setAppIsReady] = useState(false);
     
     useEffect(() => {
@@ -48,10 +49,12 @@ export function Name ({navigation}) {
     
 
     return(
+      <ImageBackground source={image} resizeMode='cover'
+      style={style.image}>
         <SafeArea>
             <View style={style.heding}>
-                <Text style={style.title}>Idan's App</Text>
-                <Text style={style.title2}>create an account</Text>
+               
+               
 
                 <Formik
                 initialValues={{Email:'',Password:'',PasswordConfirmation:''}}
@@ -59,7 +62,7 @@ export function Name ({navigation}) {
       createUserWithEmailAndPassword(auth,values.Email,values.Password,values.PasswordConfirmation)
       .then (()=>{
         Alert.alert('notify','Successful',
-        [{Text:'Go to Home',onPress:() => navigation.navigate('Mainscreen2')}])
+        [{Text:'Go to Home',onPress:() => navigation.navigate('Login')}])
      })
     }}
     validationSchema={validationRules}
@@ -137,6 +140,7 @@ export function Name ({navigation}) {
               </View>
               
           </SafeArea>
+          </ImageBackground>
     )
 }
 
@@ -145,16 +149,8 @@ const style = StyleSheet.create({
         alignItems:'center',
         justifyContent:'center',
         marginBottom:280,
-        marginTop:50
+        marginTop:"40%"
         },
-    title:{
-        fontSize:35,
-        color:'blue'
-         },
-    title2:{
-        marginTop:15,
-        color:'blue'
-    },
     input:{
         marginTop:15,
         width:300
@@ -167,6 +163,9 @@ const style = StyleSheet.create({
     },
     inputt:{
       flexDirection:'row'
-    }
+    },
+    image: {
+      flex: 1,
+      justifyContent: 'center',}
  
 })

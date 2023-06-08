@@ -1,8 +1,6 @@
-import {faDumbbell} from "@fortawesome/free-solid-svg-icons" 
-import { FontAwesomeIcon } from "@fortawesome/react-native-fontawesome";
 import React from 'react';
 import { SafeArea } from "../components/safearea";
-import { View,Text,StyleSheet,FlatList,Image,TouchableOpacity} from "react-native";
+import { View,Text,StyleSheet,FlatList,ImageBackground,TouchableOpacity} from "react-native";
 import { useState,useEffect,useCallback } from "react";
 import * as SplashScreen from 'expo-splash-screen';
 import * as Font from 'expo-font'; 
@@ -13,6 +11,7 @@ import Ionicons  from 'react-native-vector-icons/Ionicons';
 
 const Tab = createBottomTabNavigator();
  export function Beginnerscreen ({navigation}) {
+  const image = {uri: 'https://images.pexels.com/photos/1547248/pexels-photo-1547248.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load'};
   const [appIsReady, setAppIsReady] = useState(false);
 
   useEffect(() => {
@@ -49,17 +48,19 @@ const Tab = createBottomTabNavigator();
    return  null;
   }
     return(
+      <ImageBackground source={image} resizeMode='cover'
+      style={styles.image}>
         <SafeArea >
-            <View style={styles.image}>
-                <FontAwesomeIcon
-                icon={faDumbbell} size={50}/>
-                <Text style={{color:'yellow',fontWeight:'bold',fontSize:50}}>BEGINNER</Text>
-            </View>
-           
+          <View>
+            <Text style={{color:'yellow',fontSize:30,fontWeight:'bold'}}>
+              Select Purpose
+            </Text>
+          </View>
+          <View style={{flexDirection:'row',justifyContent:'center'}}>
             <TouchableOpacity >
         <View style={styles.beginnerbox}>
           <View style={styles.beginner}>
-          <FontAwesomeIcon icon={faDumbbell} size={40} color='black'/>
+        
               <Text style={{color:'yellow',fontSize:20,fontWeight:'bold'}}>
                 Chest
               </Text>
@@ -70,30 +71,18 @@ const Tab = createBottomTabNavigator();
  <TouchableOpacity onPress={() => navigation.navigate('BeginnerAbs')}>
         <View style={styles.intermediatebox}>
           <View style={styles.intermediate}>
-          <FontAwesomeIcon icon={faDumbbell} size={40} color='black'/>
               <Text style={{color:'yellow',fontSize:20,fontWeight:'bold'}}>
                 Abs
               </Text>
               </View>
               </View>
   </TouchableOpacity> 
-                  
-   
- <TouchableOpacity >
-        <View style={styles.advancedbox}>
-          <View style={styles.advanced}>
-          <FontAwesomeIcon icon={faDumbbell} size={40} color='black'/>
-              <Text style={{color:'yellow',fontSize:20,fontWeight:'bold'}}>
-                Shoulder&Back
-              </Text>
-              </View>
-        </View>
+  </View>
 
-</TouchableOpacity>
+        <View style={{flexDirection:'row',marginTop:10,justifyContent:'center'}}>
  <TouchableOpacity>
         <View style={styles.advancedbox}>
           <View style={styles.advanced}>
-          <FontAwesomeIcon icon={faDumbbell} size={40} color='black'/>
               <Text style={{color:'yellow',fontSize:20,fontWeight:'bold'}}>
                 Leg
               </Text>
@@ -104,50 +93,58 @@ const Tab = createBottomTabNavigator();
  <TouchableOpacity >
         <View style={styles.advancedbox}>
           <View style={styles.advanced}>
-          <FontAwesomeIcon icon={faDumbbell} size={40} color='black'/>
               <Text style={{color:'yellow',fontSize:20,fontWeight:'bold'}}>
                 Arm
               </Text>
               </View>
         </View>
 </TouchableOpacity>
+</View>    
+   
+   <View style={{alignItems:'center',marginTop:10}}>
+<TouchableOpacity >
+        <View style={styles.advancedbox}>
+          <View style={styles.advanced}>
+              <Text style={{color:'yellow',fontSize:20,fontWeight:'bold'}}>
+                Shoulder&Back
+              </Text>
+              </View>
+        </View>
+</TouchableOpacity>
+</View>
         </SafeArea>
+        </ImageBackground>
     )
 }
 
 const styles = StyleSheet.create({
    
-    image:{
-        marginTop:10,
-        paddingTop:15,
-        paddingBottom:50,
-        backgroundColor:'blue',
-        flexDirection:'row',
-        alignItems:"center"
-    },
     beginnerbox:{
-      marginTop:30,
-      paddingBottom:50,
-      backgroundColor:'blue',
-      borderRadius:9,
+      width:160,
+    height:100,
+    justifyContent:'center',
+    alignItems:'center',
+    backgroundColor:'#77037B',
+    borderRadius:10,
+    marginLeft:10,
     },
     intermediatebox:{
-      marginTop:15,
-      paddingBottom:50,
-      backgroundColor:'blue',
-      borderRadius:9,
+      width:160,
+      height:100,
+      justifyContent:'center',
+      alignItems:'center',
+      backgroundColor:'#77037B',
+      borderRadius:10,
+      marginLeft:10,
     },
     advancedbox:{
-      marginTop:15,
-      paddingBottom:50,
-      backgroundColor:'blue',
-      borderRadius:9,
-    },
-    imagebox:{
-      marginTop:15,
-      paddingBottom:50,
-      backgroundColor:'purple',
-      borderRadius:9,
+      width:160,
+      height:100,
+      justifyContent:'center',
+      alignItems:'center',
+      backgroundColor:'#77037B',
+      borderRadius:10,
+      marginLeft:10,
     },
     beginner:{
       flexDirection:'row',
@@ -161,7 +158,7 @@ const styles = StyleSheet.create({
       flexDirection:'row',
       alignItems:'center'
     },
-    image:{
-      flexDirection:'row'
-    },
+    image: {
+      flex: 1,
+      justifyContent: 'center',}
 })

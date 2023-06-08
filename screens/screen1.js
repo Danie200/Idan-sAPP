@@ -1,19 +1,16 @@
 import { useState,useEffect,useCallback } from "react";
 import { View,Text,StyleSheet,FlatList,Image,TouchableOpacity,ImageBackground} from "react-native";
-import { FontAwesomeIcon } from "@fortawesome/react-native-fontawesome";
-import { faForward } from "@fortawesome/free-solid-svg-icons";
 import * as SplashScreen from 'expo-splash-screen';
 import * as Font from 'expo-font'; 
 import { Inter_500Medium } from "@expo-google-fonts/inter";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import Ionicons  from 'react-native-vector-icons/Ionicons';
 import { SafeArea } from "../components/safearea";
 import React from "react";
 import { Button } from "react-native-paper";
 
 const Tab = createBottomTabNavigator();
  export function Screen1 ({navigation}) {
- 
+  const image = {uri: 'https://media.istockphoto.com/id/876895654/photo/white-silhouette-strenge-man-on-the-black-background.jpg?b=1&s=612x612&w=0&k=20&c=xsz8mbdrBxCW8v9m30ZP0yAy_xTpW42iNSIuNj6YECc='};
   const [appIsReady, setAppIsReady] = useState(false);
 
   useEffect(() => {
@@ -51,27 +48,37 @@ const Tab = createBottomTabNavigator();
   }
 
     return (
+      
+      <View style={{backgroundColor:'black', flex:1}}>
+        <ImageBackground source={image} resizeMode='center'
+      style={styles.image}>
       <SafeArea>
-         
         <View style={styles.start}>
         <View style={styles.button}>
           <Button 
           mode='contained'
           style={{backgroundColor:'blue'}}
           onPress={() => navigation.navigate('Name')}>
-            Continue
+            Get Started
           </Button>
         </View>
         </View>
-     
       </SafeArea>
-        
+      </ImageBackground>
+    
+      </View>
+       
     )
 }
 
 const styles = StyleSheet.create({ 
     start:{
-   alignItems:'center'
-    
+   alignItems:'center',
+   marginTop:'90%'
     },
+    image: {
+      flex: 1,
+      justifyContent: 'center',
+    color:'white'}
+      
 })

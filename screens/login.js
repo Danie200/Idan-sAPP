@@ -1,4 +1,4 @@
-import { View,TouchableOpacity,Text,StyleSheet,Alert} from "react-native";
+import { View,TouchableOpacity,Text,StyleSheet,Alert,ImageBackground} from "react-native";
 import { SafeArea } from "../components/safearea";
 import * as SplashScreen from 'expo-splash-screen';
 import * as Font from 'expo-font';
@@ -17,6 +17,7 @@ const validationRules = yup.object({
 
 
 export function Login ({navigation}) {
+  const image = {uri: 'https://images.pexels.com/photos/2092450/pexels-photo-2092450.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load'};
   const [appIsReady, setAppIsReady] = useState(false);
 
     useEffect(() => {
@@ -47,17 +48,17 @@ export function Login ({navigation}) {
     
 
       return(
+        <ImageBackground source={image} resizeMode='cover'
+      style={style.image}>
         <SafeArea>
           <View style={style.heding}>
-            <Text style={style.title}>Idan's App</Text>
-            <Text style={style.title2}>Login To Get Started</Text>  
     <Formik
     initialValues={{ email: '',password:'' }}
     onSubmit={(values,action) =>{
       signInWithEmailAndPassword(auth,values.email,values.password)
      .then (()=>{
         Alert.alert('notify','lOGGED IN',
-        [{Text:'Go to Home',onPress:() => navigation.navigate('Mainscreen2')}])
+        [{Text:'Go to Home',onPress:() => navigation.navigate('Gender')}])
      })
       }}
     validationSchema={validationRules}
@@ -68,7 +69,7 @@ export function Login ({navigation}) {
         <View>
             <TextInput
             label="Email"
-            mode="outlined"
+            mode="flat"
             Style={style.input}
             onChangeText={handleChange('email')}
             onBlur={handleBlur('email')}
@@ -82,7 +83,7 @@ export function Login ({navigation}) {
         <View>
             <TextInput
             label='password'
-            mode="outlined"
+            mode="flat"
             style={style.input}
             onChangeText={handleChange('password')}
             onBlur={handleBlur('password')}
@@ -116,21 +117,20 @@ export function Login ({navigation}) {
             </View>
       </View>
   </SafeArea>
+  </ImageBackground>
     )
   }
 
   const style = StyleSheet.create({
     heding:{ 
-        
+        marginTop:'40%',
         alignItems:'center',
         justifyContent:'center',
         marginBottom:280
         },
-    title:{
-        fontSize:35,
-        color:'blue'
-         },
+  
     title2:{
+      fontSize:27,
         marginTop:15,
         color:'blue'
     },
@@ -149,5 +149,8 @@ export function Login ({navigation}) {
     sign:{
       color:'blue'
     },
+    image: {
+      flex: 1,
+      justifyContent: 'center',}
 })
 

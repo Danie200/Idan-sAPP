@@ -1,18 +1,19 @@
 import { useState,useEffect,useCallback } from "react";
-import { View,Text,StyleSheet,FlatList,Image, TouchableOpacity,ImageBackground} from "react-native";
+import React from "react";
+import { View,Text,StyleSheet,ImageBackground,TouchableOpacity} from "react-native";
 import * as SplashScreen from 'expo-splash-screen';
 import * as Font from 'expo-font'; 
 import { Inter_500Medium } from "@expo-google-fonts/inter";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import Ionicons  from 'react-native-vector-icons/Ionicons';
-
 import { SafeArea } from "../components/safearea";
-import {FScreen2} from "./femalescreen2"
+import { Screen2 } from "./screen2";
+
 
 const Tab = createBottomTabNavigator();
 
- export function Screen2 ({navigation}) {
-  const image = {uri: 'https://images.pexels.com/photos/1547248/pexels-photo-1547248.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load'};
+ export function FScreen2 ({navigation}) {
+  const image = {uri: 'https://images.pexels.com/photos/416778/pexels-photo-416778.jpeg?auto=compress&cs=tinysrgb&w=600'};
   const [appIsReady, setAppIsReady] = useState(false);
 
   useEffect(() => {
@@ -55,6 +56,7 @@ const Tab = createBottomTabNavigator();
       <ImageBackground source={image} resizeMode='cover'
       style={styles.image}>
   <SafeArea >
+      
     <View>
       <Text style={{color:"yellow",fontSize:30,fontWeight:'bold'}}>
         Select Level
@@ -63,7 +65,7 @@ const Tab = createBottomTabNavigator();
      <View >
         <View>
           <View style={styles.up}>
-          <TouchableOpacity onPress={() => navigation.navigate('beginnerscreen')}>
+          <TouchableOpacity onPress={() => navigation.navigate('FBeginnerscreen')}>
             <View style={styles.beginnerbox}>
               <View style={styles.beginner}>
             
@@ -74,7 +76,7 @@ const Tab = createBottomTabNavigator();
             </View>
             </TouchableOpacity>
     
-            <TouchableOpacity onPress={() => navigation.navigate('intermediatescreen')}>
+            <TouchableOpacity onPress={() => navigation.navigate('Fintermediatescreen')}>
               <View style={styles.intermediatebox}>
               <View style={styles.intermediate}>
              
@@ -88,7 +90,7 @@ const Tab = createBottomTabNavigator();
          </View>        
 
           <View style={styles.down}>
-        <TouchableOpacity onPress={() => navigation.navigate('advancedscreen')}>
+        <TouchableOpacity onPress={() => navigation.navigate('Fadvancedscreen')}>
          <View style={styles.advancedbox}>
           <View style={styles.advanced}>
               <Text style={{color:'yellow',fontSize:20,fontWeight:'bold'}}>
@@ -99,12 +101,11 @@ const Tab = createBottomTabNavigator();
          </TouchableOpacity>
          </View>
 </View> 
-
-</SafeArea> 
-</ImageBackground>  
+</SafeArea>   
+</ImageBackground>
      )};
 
-     export function Mainscreen2 () {
+     export function Femalescreen2 () {
       return (
         <Tab.Navigator
           screenOptions={({ route }) => ({
@@ -116,7 +117,7 @@ const Tab = createBottomTabNavigator();
                   ? 'man'
                   : 'man-outline';
               } else if (route.name === 'femalescreen2') {
-                iconName = focused ? 'woman' : 'woman-outline';
+                iconName = focused ? 'woman-sharp' : 'woman-outline';
               }
               
     
@@ -127,8 +128,8 @@ const Tab = createBottomTabNavigator();
             tabBarInactiveTintColor: 'grey',
           })}
         >
-          <Tab.Screen name="MEN FITNESS" component={Screen2} options={{headerShown:false}}/>
           <Tab.Screen name="WOMEN FITNESS" component={FScreen2}  options={{headerShown:false}} />
+          <Tab.Screen name="MEN FITNESS" component={Screen2} options={{headerShown:false}}/>
         </Tab.Navigator>
       )
     }
@@ -179,7 +180,6 @@ const styles = StyleSheet.create({
     flexDirection:'row',
     alignContent:'center',
     gap:20,
-    
   },
   down:{
     alignItems:'center'
