@@ -116,7 +116,7 @@ const Tab = createBottomTabNavigator();
                 iconName = focused
                   ? 'man'
                   : 'man-outline';
-              } else if (route.name === 'femalescreen2') {
+              } else if (route.name === 'FScreen2') {
                 iconName = focused ? 'woman-sharp' : 'woman-outline';
               }
               

@@ -9,9 +9,14 @@ import {FBeginnerscreen} from "./Fbeginnerscreen"
 import {Fintermediatescreen} from "./Fintermediatescreen"
 import {Fadvancedscreen} from "./Fadvancedscreen"
 import { Beginnerabs } from "./beginnerabs";
+import { Beginnerarm } from "./beginnerarm";
+import { Beginnerchest } from "./beginnerchest";
+import { Beginnerleg } from "./beginnerlegs";
+import { Beginnersb } from "./beginnershoulder&back";
 import { Name } from "./name";
 import { Login } from "./login";
 import { Gender } from "./gender";
+
 
   const Stack = createNativeStackNavigator();
 export function StackNavigation () {
@@ -29,6 +34,10 @@ export function StackNavigation () {
             <Stack.Screen name="Fintermediatescreen" component={Fintermediatescreen}/>
             <Stack.Screen name="Fadvancedscreen" component={Fadvancedscreen}/>
             <Stack.Screen name="BeginnerAbs" component={Beginnerabs}/>
+            <Stack.Screen name="Barm" component={Beginnerarm}/>
+            <Stack.Screen name="Bchest" component={Beginnerchest}/>
+            <Stack.Screen name="Bleg" component={Beginnerleg}/>
+            <Stack.Screen name="Bsb" component={Beginnersb}/>
             <Stack.Screen name="Gender" component={Gender}/>
         </Stack.Navigator>
     )

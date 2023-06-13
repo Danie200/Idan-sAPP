@@ -8,9 +8,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import {Button} from 'react-native-paper'
 
-export function Beginnerabs() {
+export function Beginnersb() {
   const [appIsReady, setAppIsReady] = useState(false);
-  const image = {uri: 'https://images.pexels.com/photos/2827480/pexels-photo-2827480.jpeg?auto=compress&cs=tinysrgb&w=600'};
+
 
   useEffect(() => {
     async function prepare() {
@@ -55,7 +55,7 @@ export function Beginnerabs() {
         height: 150,
         resizeMode:'cover',
       }}
-     source={{uri:'https://images.pexels.com/photos/2827480/pexels-photo-2827480.jpeg?auto=compress&cs=tinysrgb&w=600'}}/>
+     source={{uri:'https://images.pexels.com/photos/8875085/pexels-photo-8875085.jpeg?auto=compress&cs=tinysrgb&w=600'}}/>
 
      <ScrollView showsVerticalScrollIndicator={false}>
       <View  style={{paddingTop:10}}>
@@ -66,6 +66,7 @@ export function Beginnerabs() {
         <FontAwesomeIcon
         icon={faBars} size={25}/>
         </View>
+
         <Text>
           _________________________________________________
         </Text>
@@ -74,7 +75,7 @@ export function Beginnerabs() {
       <View>
         <View style={{flexDirection:'row',justifyContent:'space-between',alignItems:'center',}}>
         <Text style={{fontSize:20,fontWeight:'bold'}}>
-        Abdominal Crunches
+      Arm Raises
         </Text>
         <FontAwesomeIcon
         icon={faBars} size={25}/>
@@ -87,7 +88,7 @@ export function Beginnerabs() {
       <View>
         <View style={{flexDirection:'row',justifyContent:'space-between',alignItems:'center',}}>
         <Text style={{fontSize:20,fontWeight:'bold'}}>
-        Russian Twist
+        Rhomboid Pulls
         </Text>
         <FontAwesomeIcon
         icon={faBars} size={25}/>
@@ -100,7 +101,7 @@ export function Beginnerabs() {
       <View>
         <View  style={{flexDirection:'row',justifyContent:'space-between',alignItems:'center',}}>
         <Text  style={{fontSize:20,fontWeight:'bold'}}>
-        Mountain Climber
+        Side Arm Raise
         </Text>
         <FontAwesomeIcon
         icon={faBars} size={25}/>
@@ -113,7 +114,7 @@ export function Beginnerabs() {
       <View>
         <View style={{flexDirection:'row',justifyContent:'space-between',alignItems:'center',}}>
         <Text style={{fontSize:20,fontWeight:'bold'}}>
-        Heel Touch
+       Kneel Push-Ups
         </Text>
         <FontAwesomeIcon
         icon={faBars} size={25}/>
@@ -126,7 +127,7 @@ export function Beginnerabs() {
       <View>
         <View style={{flexDirection:'row',justifyContent:'space-between',alignItems:'center',}}>
         <Text style={{fontSize:20,fontWeight:'bold'}}>
-        Leg Raises
+       Side-Lying Floor Stretch Left
         </Text>
         <FontAwesomeIcon
         icon={faBars} size={25}/>
@@ -139,7 +140,7 @@ export function Beginnerabs() {
       <View>
         <View style={{flexDirection:'row',justifyContent:'space-between',alignItems:'center',}}>
         <Text style={{fontSize:20,fontWeight:'bold'}}>
-        Plank
+        Side-Lying Floor Stretch Right
         </Text>
         <FontAwesomeIcon
         icon={faBars} size={25}/>
@@ -152,7 +153,7 @@ export function Beginnerabs() {
       <View>
         <View style={{flexDirection:'row',justifyContent:'space-between',alignItems:'center',}}>
         <Text style={{fontSize:20,fontWeight:'bold'}}>
-        Abdominal Crunches
+        Arm Scissors
         </Text>
         <FontAwesomeIcon
         icon={faBars} size={25}/>
@@ -165,7 +166,7 @@ export function Beginnerabs() {
       <View>
         <View style={{flexDirection:'row',justifyContent:'space-between',alignItems:'center',}}>
         <Text style={{fontSize:20,fontWeight:'bold'}}>
-        Russian Twist
+      \Rhomboid Pulls
         </Text>
         <FontAwesomeIcon
         icon={faBars} size={25}/>
@@ -178,7 +179,7 @@ export function Beginnerabs() {
       <View>
         <View style={{flexDirection:'row',justifyContent:'space-between',alignItems:'center',}}>
         <Text style={{fontSize:20,fontWeight:'bold'}}>
-        Mountain Climber
+       Side Arm Raise
         </Text>
         <FontAwesomeIcon
         icon={faBars} size={25}/>
@@ -191,7 +192,7 @@ export function Beginnerabs() {
       <View>
         <View style={{flexDirection:'row',justifyContent:'space-between',alignItems:'center',}}>
         <Text style={{fontSize:20,fontWeight:'bold'}}>
-        Heel Touch
+       Knee Push-Ups
         </Text>
         <FontAwesomeIcon
         icon={faBars} size={25}/>
@@ -204,7 +205,7 @@ export function Beginnerabs() {
       <View>
         <View style={{flexDirection:'row',justifyContent:'space-between',alignItems:'center',}}>
         <Text style={{fontSize:20,fontWeight:'bold'}}>
-        Leg Raises
+       Cat Cow Pose
         </Text>
         <FontAwesomeIcon
         icon={faBars} size={25}/>
@@ -217,7 +218,7 @@ export function Beginnerabs() {
       <View>
         <View style={{flexDirection:'row',justifyContent:'space-between',alignItems:'center',}}>
         <Text style={{fontSize:20,fontWeight:'bold'}}>
-        Plank
+       Prone Triceps Push Ups
         </Text>
         <FontAwesomeIcon
         icon={faBars} size={25}/>
@@ -230,7 +231,7 @@ export function Beginnerabs() {
       <View>
         <View style={{flexDirection:'row',justifyContent:'space-between',alignItems:'center',}}>
         <Text style={{fontSize:20,fontWeight:'bold'}}>
-        Cobra Stretch
+       Reclined Rhomboid Squeezes
         </Text>
         <FontAwesomeIcon
         icon={faBars} size={25}/>
@@ -243,7 +244,7 @@ export function Beginnerabs() {
       <View>
         <View style={{flexDirection:'row',justifyContent:'space-between',alignItems:'center',}}>
         <Text style={{fontSize:20,fontWeight:'bold'}}>
-        Spine Lumbar Twist Stretch Left
+        Prone Triceps Push Ups
         </Text>
         <FontAwesomeIcon
         icon={faBars} size={25}/>
@@ -256,7 +257,20 @@ export function Beginnerabs() {
       <View>
         <View style={{flexDirection:'row',justifyContent:'space-between',alignItems:'center',}}>
         <Text style={{fontSize:20,fontWeight:'bold'}}>
-        Spine Lumbar Twist Stretch Right
+        Reclined Rhomboid Squeezes
+        </Text>
+        <FontAwesomeIcon
+        icon={faBars} size={25}/>
+        </View>
+        <Text>
+          _________________________________________________
+        </Text>
+      </View>
+
+      <View>
+        <View style={{flexDirection:'row',justifyContent:'space-between',alignItems:'center',}}>
+        <Text style={{fontSize:20,fontWeight:'bold'}}>
+        Child's Pose
         </Text>
         <FontAwesomeIcon
         icon={faBars} size={25}/>

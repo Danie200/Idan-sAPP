@@ -5,7 +5,6 @@ import * as Font from 'expo-font';
 import { Inter_500Medium } from "@expo-google-fonts/inter";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import Ionicons  from 'react-native-vector-icons/Ionicons';
-
 import { SafeArea } from "../components/safearea";
 import {FScreen2} from "./femalescreen2"
 

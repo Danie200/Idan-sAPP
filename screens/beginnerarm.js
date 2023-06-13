@@ -8,9 +8,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import {Button} from 'react-native-paper'
 
-export function Beginnerabs() {
+export function Beginnerarm() {
   const [appIsReady, setAppIsReady] = useState(false);
-  const image = {uri: 'https://images.pexels.com/photos/2827480/pexels-photo-2827480.jpeg?auto=compress&cs=tinysrgb&w=600'};
+
 
   useEffect(() => {
     async function prepare() {
@@ -55,13 +55,13 @@ export function Beginnerabs() {
         height: 150,
         resizeMode:'cover',
       }}
-     source={{uri:'https://images.pexels.com/photos/2827480/pexels-photo-2827480.jpeg?auto=compress&cs=tinysrgb&w=600'}}/>
+     source={{uri:'https://images.pexels.com/photos/8874917/pexels-photo-8874917.jpeg?auto=compress&cs=tinysrgb&w=600'}}/>
 
      <ScrollView showsVerticalScrollIndicator={false}>
       <View  style={{paddingTop:10}}>
         <View style={{flexDirection:'row',justifyContent:'space-between',alignItems:'center',}}>
         <Text style={{fontSize:20,fontWeight:'bold'}}>
-          Jumping Jacks
+          Arm Raises
         </Text>
         <FontAwesomeIcon
         icon={faBars} size={25}/>
@@ -74,7 +74,7 @@ export function Beginnerabs() {
       <View>
         <View style={{flexDirection:'row',justifyContent:'space-between',alignItems:'center',}}>
         <Text style={{fontSize:20,fontWeight:'bold'}}>
-        Abdominal Crunches
+       Side Arm Raise
         </Text>
         <FontAwesomeIcon
         icon={faBars} size={25}/>
@@ -87,7 +87,7 @@ export function Beginnerabs() {
       <View>
         <View style={{flexDirection:'row',justifyContent:'space-between',alignItems:'center',}}>
         <Text style={{fontSize:20,fontWeight:'bold'}}>
-        Russian Twist
+      Triceps Dips
         </Text>
         <FontAwesomeIcon
         icon={faBars} size={25}/>
@@ -100,7 +100,7 @@ export function Beginnerabs() {
       <View>
         <View  style={{flexDirection:'row',justifyContent:'space-between',alignItems:'center',}}>
         <Text  style={{fontSize:20,fontWeight:'bold'}}>
-        Mountain Climber
+       Arm Circles ClockWise
         </Text>
         <FontAwesomeIcon
         icon={faBars} size={25}/>
@@ -113,7 +113,7 @@ export function Beginnerabs() {
       <View>
         <View style={{flexDirection:'row',justifyContent:'space-between',alignItems:'center',}}>
         <Text style={{fontSize:20,fontWeight:'bold'}}>
-        Heel Touch
+        Arm Circles AntiClockWise
         </Text>
         <FontAwesomeIcon
         icon={faBars} size={25}/>
@@ -126,7 +126,7 @@ export function Beginnerabs() {
       <View>
         <View style={{flexDirection:'row',justifyContent:'space-between',alignItems:'center',}}>
         <Text style={{fontSize:20,fontWeight:'bold'}}>
-        Leg Raises
+        Daimond Push-Ups
         </Text>
         <FontAwesomeIcon
         icon={faBars} size={25}/>
@@ -139,7 +139,7 @@ export function Beginnerabs() {
       <View>
         <View style={{flexDirection:'row',justifyContent:'space-between',alignItems:'center',}}>
         <Text style={{fontSize:20,fontWeight:'bold'}}>
-        Plank
+        Jumping Jacks
         </Text>
         <FontAwesomeIcon
         icon={faBars} size={25}/>
@@ -152,7 +152,7 @@ export function Beginnerabs() {
       <View>
         <View style={{flexDirection:'row',justifyContent:'space-between',alignItems:'center',}}>
         <Text style={{fontSize:20,fontWeight:'bold'}}>
-        Abdominal Crunches
+       Chest Press Pulse
         </Text>
         <FontAwesomeIcon
         icon={faBars} size={25}/>
@@ -165,7 +165,7 @@ export function Beginnerabs() {
       <View>
         <View style={{flexDirection:'row',justifyContent:'space-between',alignItems:'center',}}>
         <Text style={{fontSize:20,fontWeight:'bold'}}>
-        Russian Twist
+       Leg Barbell Curl Right
         </Text>
         <FontAwesomeIcon
         icon={faBars} size={25}/>
@@ -178,7 +178,7 @@ export function Beginnerabs() {
       <View>
         <View style={{flexDirection:'row',justifyContent:'space-between',alignItems:'center',}}>
         <Text style={{fontSize:20,fontWeight:'bold'}}>
-        Mountain Climber
+        Leg Barbell Curl Left
         </Text>
         <FontAwesomeIcon
         icon={faBars} size={25}/>
@@ -191,7 +191,7 @@ export function Beginnerabs() {
       <View>
         <View style={{flexDirection:'row',justifyContent:'space-between',alignItems:'center',}}>
         <Text style={{fontSize:20,fontWeight:'bold'}}>
-        Heel Touch
+        Diagonal Plank
         </Text>
         <FontAwesomeIcon
         icon={faBars} size={25}/>
@@ -204,7 +204,7 @@ export function Beginnerabs() {
       <View>
         <View style={{flexDirection:'row',justifyContent:'space-between',alignItems:'center',}}>
         <Text style={{fontSize:20,fontWeight:'bold'}}>
-        Leg Raises
+       Punches
         </Text>
         <FontAwesomeIcon
         icon={faBars} size={25}/>
@@ -217,7 +217,7 @@ export function Beginnerabs() {
       <View>
         <View style={{flexDirection:'row',justifyContent:'space-between',alignItems:'center',}}>
         <Text style={{fontSize:20,fontWeight:'bold'}}>
-        Plank
+        Push-Ups
         </Text>
         <FontAwesomeIcon
         icon={faBars} size={25}/>
@@ -230,7 +230,7 @@ export function Beginnerabs() {
       <View>
         <View style={{flexDirection:'row',justifyContent:'space-between',alignItems:'center',}}>
         <Text style={{fontSize:20,fontWeight:'bold'}}>
-        Cobra Stretch
+        Inchworms
         </Text>
         <FontAwesomeIcon
         icon={faBars} size={25}/>
@@ -243,7 +243,7 @@ export function Beginnerabs() {
       <View>
         <View style={{flexDirection:'row',justifyContent:'space-between',alignItems:'center',}}>
         <Text style={{fontSize:20,fontWeight:'bold'}}>
-        Spine Lumbar Twist Stretch Left
+       Wall Push-Ups
         </Text>
         <FontAwesomeIcon
         icon={faBars} size={25}/>
@@ -256,7 +256,46 @@ export function Beginnerabs() {
       <View>
         <View style={{flexDirection:'row',justifyContent:'space-between',alignItems:'center',}}>
         <Text style={{fontSize:20,fontWeight:'bold'}}>
-        Spine Lumbar Twist Stretch Right
+           Triceps Stretch Left
+        </Text>
+        <FontAwesomeIcon
+        icon={faBars} size={25}/>
+        </View>
+        <Text>
+          _________________________________________________
+        </Text>
+      </View>
+      
+      <View>
+        <View style={{flexDirection:'row',justifyContent:'space-between',alignItems:'center',}}>
+        <Text style={{fontSize:20,fontWeight:'bold'}}>
+           Triceps Stretch Right
+        </Text>
+        <FontAwesomeIcon
+        icon={faBars} size={25}/>
+        </View>
+        <Text>
+          _________________________________________________
+        </Text>
+      </View>
+
+      <View>
+        <View style={{flexDirection:'row',justifyContent:'space-between',alignItems:'center',}}>
+        <Text style={{fontSize:20,fontWeight:'bold'}}>
+           Standing Biceps Stretch Left
+        </Text>
+        <FontAwesomeIcon
+        icon={faBars} size={25}/>
+        </View>
+        <Text>
+          _________________________________________________
+        </Text>
+      </View>
+
+      <View>
+        <View style={{flexDirection:'row',justifyContent:'space-between',alignItems:'center',}}>
+        <Text style={{fontSize:20,fontWeight:'bold'}}>
+           Standing Biceps Stretch Right
         </Text>
         <FontAwesomeIcon
         icon={faBars} size={25}/>

@@ -49,7 +49,7 @@ const Tab = createBottomTabNavigator();
 
     return (
       
-      <View style={{backgroundColor:'black', flex:1}}>
+      <View style={{backgroundColor:'black', flex:1,}}>
         <ImageBackground source={image} resizeMode='center'
       style={styles.image}>
       <SafeArea>
@@ -65,16 +65,15 @@ const Tab = createBottomTabNavigator();
         </View>
       </SafeArea>
       </ImageBackground>
-    
       </View>
-       
+      
     )
 }
 
 const styles = StyleSheet.create({ 
     start:{
    alignItems:'center',
-   marginTop:'90%'
+   marginTop:'90%',
     },
     image: {
       flex: 1,
