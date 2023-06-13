@@ -1,9 +1,10 @@
-import { View,TouchableOpacity,Text,StyleSheet,Alert,ImageBackground} from "react-native";
+import { View,TouchableOpacity,Text,StyleSheet,Alert,ImageBackground,ActivityIndicator} from "react-native";
 import { SafeArea } from "../components/safearea";
 import * as SplashScreen from 'expo-splash-screen';
 import * as Font from 'expo-font';
 import { Inter_400Regular } from "@expo-google-fonts/inter"
-import { useState,useEffect,useCallback } from "react";
+import { useState,useEffect,useCallback ,useContext} from "react";
+import {AppContext} from "../settings/gbVariables"
 import { TextInput,Button } from 'react-native-paper';
 import * as yup from 'yup';
 import { Formik } from "formik";
@@ -19,6 +20,8 @@ const validationRules = yup.object({
 export function Login ({navigation}) {
   const image = {uri: 'https://images.pexels.com/photos/2092450/pexels-photo-2092450.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load'};
   const [appIsReady, setAppIsReady] = useState(false);
+  const [eventActivityIndicator,seteventActivityIndicator]= useState(false);
+  const {setUid} = useContext(AppContext)
 
     useEffect(() => {
 
@@ -52,14 +55,36 @@ export function Login ({navigation}) {
       style={style.image}>
         <SafeArea>
           <View style={style.heding}>
+          { eventActivityIndicator ? <ActivityIndicator size='large' color='white'/> :null}
     <Formik
     initialValues={{ email: '',password:'' }}
     onSubmit={(values,action) =>{
+      seteventActivityIndicator(true);
       signInWithEmailAndPassword(auth,values.email,values.password)
-     .then (()=>{
-        Alert.alert('notify','lOGGED IN',
-        [{Text:'Go to Home',onPress:() => navigation.navigate('Gender')}])
-     })
+      .then(() => onAuthStateChanged(auth,(user) => {setUid(user.uid)
+      navigation.navigate('Gender')}))
+        .catch(error => {
+          if (error.code == 'auth/invalid-email') {
+            seteventActivityIndicator(false);
+            Alert.alert(
+                'message',
+                'Invalid email/password',
+                [{text:'Try Again'}]
+            )
+        } else if (error.code == 'auth/wrong-password' || error.code == 'auth/user-not-found'){
+          seteventActivityIndicator(false);
+        Alert.alert(
+            'message',
+            'invalid email/password',
+            [{text:'Try Again'}])
+        }else {
+          seteventActivityIndicator(false);
+            Alert.alert(
+                'message',
+                'Something Went Wrong',
+                [{text:'Dismiss'}])
+        }
+        })    
       }}
     validationSchema={validationRules}
   >

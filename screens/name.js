@@ -1,8 +1,9 @@
-import { View,TouchableOpacity,Text,StyleSheet,Alert,ImageBackground} from "react-native";
+import { View,TouchableOpacity,Text,StyleSheet,Alert,ImageBackground,ActivityIndicator} from "react-native";
 import { SafeArea } from "../components/safearea";
 import * as SplashScreen from 'expo-splash-screen';
 import * as Font from 'expo-font';
-import { useState,useEffect,useCallback } from "react";
+import { useState,useEffect,useCallback ,useContext} from "react";
+import  {AppContext} from "../settings/gbVariables"
 import { TextInput,Button } from 'react-native-paper';
 import { Inter_400Regular } from "@expo-google-fonts/inter";
 import * as yup from 'yup';
@@ -20,6 +21,8 @@ const validationRules = yup.object({
 export function Name ({navigation}) {
   const image = {uri: 'https://images.pexels.com/photos/2092450/pexels-photo-2092450.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load'};
     const [appIsReady, setAppIsReady] = useState(false);
+    const {setUid} = useContext(AppContext)
+    const [eventActivityIndicator,seteventActivityIndicator]= useState(false);
     
     useEffect(() => {
 
@@ -53,17 +56,46 @@ export function Name ({navigation}) {
       style={style.image}>
         <SafeArea>
             <View style={style.heding}>
-               
-               
-
+            { eventActivityIndicator ? <ActivityIndicator size='large' color='white'/> :null}
                 <Formik
                 initialValues={{Email:'',Password:'',PasswordConfirmation:''}}
     onSubmit={(values,action) =>{
-      createUserWithEmailAndPassword(auth,values.Email,values.Password,values.PasswordConfirmation)
-      .then (()=>{
-        Alert.alert('notify','Successful',
-        [{Text:'Go to Home',onPress:() => navigation.navigate('Login')}])
-     })
+      seteventActivityIndicator(true);
+      createUserWithEmailAndPassword(auth,values.Email,values.Password)
+                  .then(() => onAuthStateChanged(auth,(user) => {
+                    setUid(user.uid);//update to the user's uid
+                    console.log(setUid);
+                    seteventActivityIndicator(false);
+                    Alert.alert(
+                        'message',
+                        'your account was created',
+                        [{text:'go to Login',onPress:() => navigation.navigate('Login')}]
+                    )
+                  }))
+                  .catch((error) =>{
+                    //custom actions for different errors
+                    if (error.code == 'auth/invalid-email') {
+                        seteventActivityIndicator(false);
+                        Alert.alert(
+                            'message',
+                            'invalid email',
+                            [{text:'Try Again'}]
+                        )
+                    } else if (error.code == 'auth/email-already-in-use'){
+                        seteventActivityIndicator(false);
+                    Alert.alert(
+                        'message',
+                        'your account was created',
+                        [{text:'go to Home',onPress:() => navigation.navigate('Login')},
+                        {text:'ForgotPassword',onPress:() => navigation.navigate('ResetPassword')}])
+                    }else {
+                        seteventActivityIndicator(false);
+                        Alert.alert(
+                            'message',
+                            'Something Went Wrong',
+                            [{text:'Dismiss'}])
+                    }
+                  })
     }}
     validationSchema={validationRules}
   >

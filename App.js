@@ -1,11 +1,14 @@
 import { NavigationContainer } from "@react-navigation/native";
 import {StackNavigation} from "./screens/screennavigator"
+import { AppProvider } from "./settings/gbVariables";
 
 export default function App () {
   return(
-   <NavigationContainer>
-     <StackNavigation/>
-   </NavigationContainer>
+<AppProvider>
+      <NavigationContainer>
+        <StackNavigation/>
+      </NavigationContainer>
+ </AppProvider>
   )
 }
 
