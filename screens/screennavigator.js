@@ -16,8 +16,18 @@ import { Beginnersb } from "./beginnershoulder&back";
 import { Name } from "./name";
 import { Login } from "./login";
 import { Gender } from "./gender";
-
-
+import { CreateProfile } from "./createProfile";
+import { Profile } from "./Profile";
+import { Intermediatechest } from "./intermediatechest";
+import { Intermediateabs } from "./intermediateabs";
+import { Intermediateleg } from "./intermediateleg";
+import { Intermediatearm } from "./intermediatearm";
+import { Intermediatesb } from "./intermediatesb";
+import { Advancedarm } from "./advancedarm";
+import { Advancedchest } from "./Advancedchest";
+import { Advancedabs } from "./advancedabs";
+import { Advancedleg } from "./advancedleg";
+import { Advancedsb } from "./advancedsb";
   const Stack = createNativeStackNavigator();
 export function StackNavigation () {
     return (
@@ -39,6 +49,18 @@ export function StackNavigation () {
             <Stack.Screen name="Bleg" component={Beginnerleg}/>
             <Stack.Screen name="Bsb" component={Beginnersb}/>
             <Stack.Screen name="Gender" component={Gender}/>
+            <Stack.Screen name="CreateProfile" component={CreateProfile}/>
+            <Stack.Screen name="Profile" component={Profile}/>
+            <Stack.Screen name="Intermediatechest" component={Intermediatechest}/>
+            <Stack.Screen name="Intermediateabs" component={Intermediateabs}/>
+            <Stack.Screen name="Intermediateleg" component={Intermediateleg}/>
+            <Stack.Screen name="Intermediatearm" component={Intermediatearm}/>
+            <Stack.Screen name="Intermediatesb" component={Intermediatesb}/>
+            <Stack.Screen name="Advancedarm" component={Advancedarm}/>
+            <Stack.Screen name="Advancedchest" component={Advancedchest}/>
+            <Stack.Screen name="Advancedabs" component={Advancedabs}/>
+            <Stack.Screen name="Advancedleg" component={Advancedleg}/>
+            <Stack.Screen name="Advancedsb" component={Advancedsb}/>
         </Stack.Navigator>
     )
 }

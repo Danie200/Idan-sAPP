@@ -6,7 +6,7 @@ import * as SplashScreen from 'expo-splash-screen';
 import * as Font from 'expo-font'; 
 import { Inter_500Medium } from "@expo-google-fonts/inter";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import Ionicons  from 'react-native-vector-icons/Ionicons';
+
 
 
 const Tab = createBottomTabNavigator();
@@ -56,11 +56,11 @@ const Tab = createBottomTabNavigator();
               Select Purpose
             </Text>
           </View>
+
           <View style={{flexDirection:'row',justifyContent:'center'}}>
-            <TouchableOpacity >
+            <TouchableOpacity onPress={()=> navigation.navigate('Intermediatechest')}>
         <View style={styles.beginnerbox}>
           <View style={styles.beginner}>
-        
               <Text style={{color:'yellow',fontSize:20,fontWeight:'bold'}}>
                 Chest
               </Text>
@@ -68,7 +68,7 @@ const Tab = createBottomTabNavigator();
         </View>
  </TouchableOpacity>
  
- <TouchableOpacity onPress={() => navigation.navigate('BeginnerAbs')}>
+ <TouchableOpacity onPress={() => navigation.navigate('Intermediateabs')}>
         <View style={styles.intermediatebox}>
           <View style={styles.intermediate}>
               <Text style={{color:'yellow',fontSize:20,fontWeight:'bold'}}>
@@ -80,7 +80,7 @@ const Tab = createBottomTabNavigator();
   </View>
 
         <View style={{flexDirection:'row',marginTop:10,justifyContent:'center'}}>
- <TouchableOpacity>
+ <TouchableOpacity onPress={() => navigation.navigate('Intermediateleg')}>
         <View style={styles.advancedbox}>
           <View style={styles.advanced}>
               <Text style={{color:'yellow',fontSize:20,fontWeight:'bold'}}>
@@ -90,7 +90,7 @@ const Tab = createBottomTabNavigator();
         </View>
 </TouchableOpacity>
 
- <TouchableOpacity >
+ <TouchableOpacity onPress={() => navigation.navigate('Intermediatearm')} >
         <View style={styles.advancedbox}>
           <View style={styles.advanced}>
               <Text style={{color:'yellow',fontSize:20,fontWeight:'bold'}}>
@@ -102,7 +102,7 @@ const Tab = createBottomTabNavigator();
 </View>    
    
    <View style={{alignItems:'center',marginTop:10}}>
-<TouchableOpacity >
+<TouchableOpacity  onPress={() => navigation.navigate('Intermediatesb')}>
         <View style={styles.advancedbox}>
           <View style={styles.advanced}>
               <Text style={{color:'yellow',fontSize:20,fontWeight:'bold'}}>

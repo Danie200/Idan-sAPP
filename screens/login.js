@@ -62,7 +62,7 @@ export function Login ({navigation}) {
       seteventActivityIndicator(true);
       signInWithEmailAndPassword(auth,values.email,values.password)
       .then(() => onAuthStateChanged(auth,(user) => {setUid(user.uid)
-      navigation.navigate('Gender')}))
+        navigation.navigate('Gender')}))
         .catch(error => {
           if (error.code == 'auth/invalid-email') {
             seteventActivityIndicator(false);

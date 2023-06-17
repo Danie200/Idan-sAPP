@@ -7,6 +7,7 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import Ionicons  from 'react-native-vector-icons/Ionicons';
 import { SafeArea } from "../components/safearea";
 import {FScreen2} from "./femalescreen2"
+import { Profile } from "./Profile";
 
 const Tab = createBottomTabNavigator();
 
@@ -110,12 +111,14 @@ const Tab = createBottomTabNavigator();
             tabBarIcon: ({ focused, color, size }) => {
               let iconName;
     
-              if (route.name === 'Mainscreen2') {
+              if (route.name === 'MEN FITNESS') {
                 iconName = focused
                   ? 'man'
                   : 'man-outline';
-              } else if (route.name === 'femalescreen2') {
-                iconName = focused ? 'woman' : 'woman-outline';
+              } else if (route.name === 'WOMEN FITNESS') {
+                iconName = focused ? 'woman'  : 'woman-outline';
+              } else if (route.name === 'Profile') {
+                iconName = focused ? 'information-circle'  : 'information-circle-outline';
               }
               
     
@@ -128,6 +131,7 @@ const Tab = createBottomTabNavigator();
         >
           <Tab.Screen name="MEN FITNESS" component={Screen2} options={{headerShown:false}}/>
           <Tab.Screen name="WOMEN FITNESS" component={FScreen2}  options={{headerShown:false}} />
+          <Tab.Screen name="Profile" component={Profile}  options={{headerShown:false}} />
         </Tab.Navigator>
       )
     }

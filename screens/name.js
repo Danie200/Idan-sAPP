@@ -64,12 +64,12 @@ export function Name ({navigation}) {
       createUserWithEmailAndPassword(auth,values.Email,values.Password)
                   .then(() => onAuthStateChanged(auth,(user) => {
                     setUid(user.uid);//update to the user's uid
-                    console.log(setUid);
                     seteventActivityIndicator(false);
                     Alert.alert(
                         'message',
                         'your account was created',
-                        [{text:'go to Login',onPress:() => navigation.navigate('Login')}]
+                        [{text:'Create Profile',onPress:()=>navigation.navigate('CreateProfile')}],
+                        
                     )
                   }))
                   .catch((error) =>{
@@ -86,7 +86,7 @@ export function Name ({navigation}) {
                     Alert.alert(
                         'message',
                         'your account was created',
-                        [{text:'go to Home',onPress:() => navigation.navigate('Login')},
+                        [{text:'Go To Login',onPress:() => navigation.navigate('Login')},
                         {text:'ForgotPassword',onPress:() => navigation.navigate('ResetPassword')}])
                     }else {
                         seteventActivityIndicator(false);
