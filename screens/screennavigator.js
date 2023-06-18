@@ -28,6 +28,14 @@ import { Advancedchest } from "./Advancedchest";
 import { Advancedabs } from "./advancedabs";
 import { Advancedleg } from "./advancedleg";
 import { Advancedsb } from "./advancedsb";
+import { Fbeginnerstaytoned } from "./Fbeginnerstaytoned";
+import { Fbeginnerloseweight } from "./Fbeginnerloseweight";
+import { Fbeginnerfullbody } from "./Fbeginnerfullbody";
+import { Fbeginnerabs } from "./Fbeginnerabs";
+import { Fintermediateloseweight } from "./Fintermediateloseweight";
+import { Fintermediateabs } from "./Fintermediateabs";
+import { Fintermediatestaytoned } from "./Fintermediatestaytoned";
+import { Fintermediatefullbody } from "./Fintermedaitefullbody";
   const Stack = createNativeStackNavigator();
 export function StackNavigation () {
     return (
@@ -61,6 +69,15 @@ export function StackNavigation () {
             <Stack.Screen name="Advancedabs" component={Advancedabs}/>
             <Stack.Screen name="Advancedleg" component={Advancedleg}/>
             <Stack.Screen name="Advancedsb" component={Advancedsb}/>
+            <Stack.Screen name="Fbeginnerstaytoned" component={Fbeginnerstaytoned}/>
+            <Stack.Screen name="Fbeginnerloseweight" component={Fbeginnerloseweight}/>
+            <Stack.Screen name="Fbeginnerfullbody" component={Fbeginnerfullbody}/>
+            <Stack.Screen name="Fbeginnerabs" component={Fbeginnerabs}/>
+            <Stack.Screen name="Fintermediateloseweight" component={Fintermediateloseweight}/>
+            <Stack.Screen name="Fintermediateabs" component={Fintermediateabs}/>
+            <Stack.Screen name="Fintermediatestaytoned" component={Fintermediatestaytoned}/>
+            <Stack.Screen name="Fintermediatefullbody" component={Fintermediatefullbody}/>
+
         </Stack.Navigator>
     )
 }
