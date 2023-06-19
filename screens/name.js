@@ -145,19 +145,20 @@ export function Name ({navigation}) {
         
         <View style={style.button}>
           <Button 
+          textColor="yellow"
           mode="contained"
-          style={{backgroundColor:'blue'}}
+          style={{backgroundColor:'purple'}}
           onPress={handleSubmit}>
             Continue
           </Button>
         </View>
 
         <View style={style.inputt}>
-        <Text style={{color:'red'}}>
+        <Text style={{color:'blue'}}>
           ALREADY HAVE AN ACCOUNT?
         </Text>
         <TouchableOpacity onPress={() => navigation.navigate('Login')}>
-        <Text  style={{color:'blue'}}>
+        <Text  style={{color:'yellow'}}>
           Login
         </Text>
         </TouchableOpacity>

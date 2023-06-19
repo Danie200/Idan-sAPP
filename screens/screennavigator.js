@@ -1,5 +1,6 @@
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { Screen1 } from "./screen1";
+import { Fpassword } from "./forgotpassword";
 import {Mainscreen2} from "./screen2"
 import { Beginnerscreen } from "./beginnerscreen";
 import { Intermediatescreen } from "./intermediatescreen";
@@ -36,11 +37,23 @@ import { Fintermediateloseweight } from "./Fintermediateloseweight";
 import { Fintermediateabs } from "./Fintermediateabs";
 import { Fintermediatestaytoned } from "./Fintermediatestaytoned";
 import { Fintermediatefullbody } from "./Fintermedaitefullbody";
+import { Fadvancedstaytoned } from "./Fadvancedstaytoned";
+import { Fadvancedabs } from "./Fadvancedabs";
+import { Fadvancedloseweight } from "./Fadvancdloseweight";
+import { Fadvancedfullbody } from "./Fadvancedfullbody";
+import { Jumpingjacks } from "./jumpingjacks";
+import { Inclinepushup } from "./Inclinepushup";
+import { Pushup } from "./Pushup";
+import { Widearmpushup } from "./Widearmpushup";
+import { Tricepsdips } from "./Tricepsdips";
+import { Kneepushup } from "./kneepushup";
+
   const Stack = createNativeStackNavigator();
 export function StackNavigation () {
     return (
         <Stack.Navigator screenOptions={{headerShown:false}} initialRouteName="screen1" >
             <Stack.Screen name="Name" component={Name}/>
+            <Stack.Screen name="FP" component={Fpassword}/>
             <Stack.Screen name="Login" component={Login}/>
             <Stack.Screen name="screen1" component={Screen1}/>
             <Stack.Screen name="Mainscreen2" component={Mainscreen2} options={{headerShown:false}}/>
@@ -77,6 +90,16 @@ export function StackNavigation () {
             <Stack.Screen name="Fintermediateabs" component={Fintermediateabs}/>
             <Stack.Screen name="Fintermediatestaytoned" component={Fintermediatestaytoned}/>
             <Stack.Screen name="Fintermediatefullbody" component={Fintermediatefullbody}/>
+            <Stack.Screen name="Fadvancedstaytoned" component={Fadvancedstaytoned}/>
+            <Stack.Screen name="Fadvancedabs" component={Fadvancedabs}/>
+            <Stack.Screen name="Fadvancedloseweight" component={Fadvancedloseweight}/>
+            <Stack.Screen name="Fadvancedfullbody" component={Fadvancedfullbody}/>
+            <Stack.Screen name="Jumpingjacks" component={Jumpingjacks}/>
+            <Stack.Screen name="Inclinepushup" component={Inclinepushup}/>
+            <Stack.Screen name="Pushup" component={Pushup}/>
+            <Stack.Screen name="Widearmpushup" component={Widearmpushup}/>
+            <Stack.Screen name="Tricepdips" component={Tricepsdips}/>
+            <Stack.Screen name="Kneepushup" component={Kneepushup}/>
 
         </Stack.Navigator>
     )

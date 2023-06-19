@@ -57,10 +57,9 @@ const Tab = createBottomTabNavigator();
             </Text>
           </View>
           <View style={{flexDirection:'row',justifyContent:'center'}}>
-            <TouchableOpacity >
+            <TouchableOpacity  onPress={() => navigation.navigate('Fadvancedfullbody')}>
         <View style={styles.beginnerbox}>
           <View style={styles.beginner}>
-        
               <Text style={{color:'yellow',fontSize:20,fontWeight:'bold'}}>
                 Full Body
               </Text>
@@ -68,7 +67,7 @@ const Tab = createBottomTabNavigator();
         </View>
  </TouchableOpacity>
  
- <TouchableOpacity onPress={() => navigation.navigate('BeginnerAbs')}>
+ <TouchableOpacity onPress={() => navigation.navigate('Fadvancedabs')} >
         <View style={styles.intermediatebox}>
           <View style={styles.intermediate}>
               <Text style={{color:'yellow',fontSize:20,fontWeight:'bold'}}>
@@ -80,7 +79,7 @@ const Tab = createBottomTabNavigator();
   </View>
 
         <View style={{flexDirection:'row',marginTop:10,justifyContent:'center'}}>
- <TouchableOpacity>
+ <TouchableOpacity  onPress={() => navigation.navigate('Fadvancedloseweight')}>
         <View style={styles.advancedbox}>
           <View style={styles.advanced}>
               <Text style={{color:'yellow',fontSize:20,fontWeight:'bold'}}>
@@ -90,7 +89,7 @@ const Tab = createBottomTabNavigator();
         </View>
 </TouchableOpacity>
 
- <TouchableOpacity >
+ <TouchableOpacity onPress={() => navigation.navigate('Fadvancedstaytoned')}>
         <View style={styles.advancedbox}>
           <View style={styles.advanced}>
               <Text style={{color:'yellow',fontSize:20,fontWeight:'bold'}}>

@@ -8,9 +8,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import {Button} from 'react-native-paper'
 
-export function Beginnerchest({navigation}) {
+export function Fadvancedstaytoned({navigation}) {
   const [appIsReady, setAppIsReady] = useState(false);
- 
+
 
   useEffect(() => {
     async function prepare() {
@@ -55,18 +55,16 @@ export function Beginnerchest({navigation}) {
         height: 150,
         resizeMode:'cover',
       }}
-     source={{uri:'https://media.istockphoto.com/id/1179784738/photo/man-with-pain-in-his-stomach.jpg?b=1&s=612x612&w=0&k=20&c=Jya38eP4q7pFlO5Fec76tU5YKhU46bLIv7q45PBAW2s='}}/>
+     source={{uri:'https://media.istockphoto.com/id/1406005706/photo/multiethnic-female-posing-in-a-studio-in-her-sportswear.jpg?s=612x612&w=0&k=20&c=UYRwz4n5IlPFRf_eKncsWUWXmHl-zJKuIQmdM4U8chQ='}}/>
 
      <ScrollView showsVerticalScrollIndicator={false}>
       <View  style={{paddingTop:10}}>
         <View style={{flexDirection:'row',justifyContent:'space-between',alignItems:'center',}}>
         <Text style={{fontSize:20,fontWeight:'bold'}}>
-          Jumping Jacks
+          Slow High Knees
         </Text>
-        <TouchableOpacity onPress={() => navigation.navigate('Jumpingjacks')}>
         <FontAwesomeIcon
         icon={faBars} size={25}/>
-        </TouchableOpacity>
         </View>
         <Text>
           _________________________________________________
@@ -76,12 +74,10 @@ export function Beginnerchest({navigation}) {
       <View>
         <View style={{flexDirection:'row',justifyContent:'space-between',alignItems:'center',}}>
         <Text style={{fontSize:20,fontWeight:'bold'}}>
-        Incline push-ups
+       Shoulder Muscle Activation
         </Text>
-        <TouchableOpacity onPress={() => navigation.navigate('Inclinepushup')}>
         <FontAwesomeIcon
         icon={faBars} size={25}/>
-        </TouchableOpacity>
         </View>
         <Text>
           _________________________________________________
@@ -91,12 +87,10 @@ export function Beginnerchest({navigation}) {
       <View>
         <View style={{flexDirection:'row',justifyContent:'space-between',alignItems:'center',}}>
         <Text style={{fontSize:20,fontWeight:'bold'}}>
-         Push-Ups
+           Good Morning Flexion
         </Text>
-        <TouchableOpacity onPress={() => navigation.navigate('Pushup')}>
         <FontAwesomeIcon
         icon={faBars} size={25}/>
-        </TouchableOpacity>
         </View>
         <Text>
           _________________________________________________
@@ -106,97 +100,7 @@ export function Beginnerchest({navigation}) {
       <View>
         <View  style={{flexDirection:'row',justifyContent:'space-between',alignItems:'center',}}>
         <Text  style={{fontSize:20,fontWeight:'bold'}}>
-        Wide Arm Push-Ups
-        </Text>
-        <TouchableOpacity onPress={() => navigation.navigate('Widearmpushup')}>
-        <FontAwesomeIcon
-        icon={faBars} size={25}/>
-        </TouchableOpacity>
-        </View>
-        <Text>
-          _________________________________________________
-        </Text>
-      </View>
-
-      <View>
-        <View style={{flexDirection:'row',justifyContent:'space-between',alignItems:'center',}}>
-        <Text style={{fontSize:20,fontWeight:'bold'}}>
-        Tricep Dips
-        </Text>
-        <TouchableOpacity onPress={() => navigation.navigate('Tricepdips')}>
-        <FontAwesomeIcon
-        icon={faBars} size={25}/>
-        </TouchableOpacity>
-        </View>
-        <Text>
-          _________________________________________________
-        </Text>
-      </View>
-
-      <View>
-        <View style={{flexDirection:'row',justifyContent:'space-between',alignItems:'center',}}>
-        <Text style={{fontSize:20,fontWeight:'bold'}}>
-       Wide Arm Push-Ups
-        </Text>
-        <TouchableOpacity onPress={() => navigation.navigate('Widearmpushup')}>
-        <FontAwesomeIcon
-        icon={faBars} size={25}/>
-        </TouchableOpacity>
-        </View>
-        <Text>
-          _________________________________________________
-        </Text>
-      </View>
-
-      <View>
-        <View style={{flexDirection:'row',justifyContent:'space-between',alignItems:'center',}}>
-        <Text style={{fontSize:20,fontWeight:'bold'}}>
-       Incline Push-Ups
-        </Text>
-        <TouchableOpacity onPress={() => navigation.navigate('Inclinepushup')}>
-        <FontAwesomeIcon
-        icon={faBars} size={25}/>
-        </TouchableOpacity>
-        </View>
-        <Text>
-          _________________________________________________
-        </Text>
-      </View>
-
-      <View>
-        <View style={{flexDirection:'row',justifyContent:'space-between',alignItems:'center',}}>
-        <Text style={{fontSize:20,fontWeight:'bold'}}>
-        Triceps Dips
-        </Text>
-        <TouchableOpacity onPress={() => navigation.navigate('Tricepdips')}>
-        <FontAwesomeIcon
-        icon={faBars} size={25}/>
-        </TouchableOpacity>
-        </View>
-        <Text>
-          _________________________________________________
-        </Text>
-      </View>
-
-      <View>
-        <View style={{flexDirection:'row',justifyContent:'space-between',alignItems:'center',}}>
-        <Text style={{fontSize:20,fontWeight:'bold'}}>
-       Knee Push-Ups
-        </Text>
-        <TouchableOpacity onPress={() => navigation.navigate('Kneepushup')}>
-        <FontAwesomeIcon
-        icon={faBars} size={25}/>
-        </TouchableOpacity>
-        </View>
-        <Text>
-          _________________________________________________
-        </Text>
-      </View>
-
-      <View>
-        <View style={{flexDirection:'row',justifyContent:'space-between',alignItems:'center',}}>
-        <Text style={{fontSize:20,fontWeight:'bold'}}>
-       Cobra Stretch
+          Rapid Mountain Climber
         </Text>
         <FontAwesomeIcon
         icon={faBars} size={25}/>
@@ -209,7 +113,7 @@ export function Beginnerchest({navigation}) {
       <View>
         <View style={{flexDirection:'row',justifyContent:'space-between',alignItems:'center',}}>
         <Text style={{fontSize:20,fontWeight:'bold'}}>
-      Chest Stretch
+            Rapid Split Lunge
         </Text>
         <FontAwesomeIcon
         icon={faBars} size={25}/>
@@ -219,7 +123,276 @@ export function Beginnerchest({navigation}) {
         </Text>
       </View>
 
+      <View>
+        <View style={{flexDirection:'row',justifyContent:'space-between',alignItems:'center',}}>
+        <Text style={{fontSize:20,fontWeight:'bold'}}>
+          Double Leg Butt Kick
+        </Text>
+        <FontAwesomeIcon
+        icon={faBars} size={25}/>
+        </View>
+        <Text>
+          _________________________________________________
+        </Text>
+      </View>
+
+      <View>
+        <View style={{flexDirection:'row',justifyContent:'space-between',alignItems:'center',}}>
+        <Text style={{fontSize:20,fontWeight:'bold'}}>
+        Mummy Jump
+        </Text>
+        <FontAwesomeIcon
+        icon={faBars} size={25}/>
+        </View>
+        <Text>
+          _________________________________________________
+        </Text>
+      </View>
+
+      <View>
+        <View style={{flexDirection:'row',justifyContent:'space-between',alignItems:'center',}}>
+        <Text style={{fontSize:20,fontWeight:'bold'}}>
+        Kneeling Left Diagonal Bracing
+        </Text>
+        <FontAwesomeIcon
+        icon={faBars} size={25}/>
+        </View>
+        <Text>
+          _________________________________________________
+        </Text>
+      </View>
+
+      <View>
+        <View style={{flexDirection:'row',justifyContent:'space-between',alignItems:'center',}}>
+        <Text style={{fontSize:20,fontWeight:'bold'}}>
+        Kneeling Right Diagonal Bracing
+        </Text>
+        <FontAwesomeIcon
+        icon={faBars} size={25}/>
+        </View>
+        <Text>
+          _________________________________________________
+        </Text>
+      </View>
+
+      <View>
+        <View style={{flexDirection:'row',justifyContent:'space-between',alignItems:'center',}}>
+        <Text style={{fontSize:20,fontWeight:'bold'}}>
+        Back Bracing
+        </Text>
+        <FontAwesomeIcon
+        icon={faBars} size={25}/>
+        </View>
+        <Text>
+          _________________________________________________
+        </Text>
+      </View>
+
+      <View>
+        <View style={{flexDirection:'row',justifyContent:'space-between',alignItems:'center',}}>
+        <Text style={{fontSize:20,fontWeight:'bold'}}>
+           Bracing Abdominal Jump
+        </Text>
+        <FontAwesomeIcon
+        icon={faBars} size={25}/>
+        </View>
+        <Text>
+          _________________________________________________
+        </Text>
+      </View>
+
+      <View>
+        <View style={{flexDirection:'row',justifyContent:'space-between',alignItems:'center',}}>
+        <Text style={{fontSize:20,fontWeight:'bold'}}>
+        Dynamic Plank Abdominal Jump
+        </Text>
+        <FontAwesomeIcon
+        icon={faBars} size={25}/>
+        </View>
+        <Text>
+          _________________________________________________
+        </Text>
+      </View>
+
+      <View>
+        <View style={{flexDirection:'row',justifyContent:'space-between',alignItems:'center',}}>
+        <Text style={{fontSize:20,fontWeight:'bold'}}>
+        Dynamic Plank
+        </Text>
+        <FontAwesomeIcon
+        icon={faBars} size={25}/>
+        </View>
+        <Text>
+          _________________________________________________
+        </Text>
+      </View>
+
+      <View>
+        <View style={{flexDirection:'row',justifyContent:'space-between',alignItems:'center',}}>
+        <Text style={{fontSize:20,fontWeight:'bold'}}>
+          Supine Alternating Leg Lift
+        </Text>
+        <FontAwesomeIcon
+        icon={faBars} size={25}/>
+        </View>
+        <Text>
+          _________________________________________________
+        </Text>
+      </View>
+
+      <View>
+        <View style={{flexDirection:'row',justifyContent:'space-between',alignItems:'center',}}>
+        <Text style={{fontSize:20,fontWeight:'bold'}}>
+            V Bracing
+        </Text>
+        <FontAwesomeIcon
+        icon={faBars} size={25}/>
+        </View>
+        <Text>
+          _________________________________________________
+        </Text>
+      </View>
+
+      <View>
+        <View style={{flexDirection:'row',justifyContent:'space-between',alignItems:'center',}}>
+        <Text style={{fontSize:20,fontWeight:'bold'}}>
+           High Hip Bridge
+        </Text>
+        <FontAwesomeIcon
+        icon={faBars} size={25}/>
+        </View>
+        <Text>
+          _________________________________________________
+        </Text>
+      </View>
       
+      <View>
+        <View style={{flexDirection:'row',justifyContent:'space-between',alignItems:'center',}}>
+        <Text style={{fontSize:20,fontWeight:'bold'}}>
+          Left Bulgarian Squat
+        </Text>
+        <FontAwesomeIcon
+        icon={faBars} size={25}/>
+        </View>
+        <Text>
+          _________________________________________________
+        </Text>
+      </View>
+
+     
+      <View>
+        <View style={{flexDirection:'row',justifyContent:'space-between',alignItems:'center',}}>
+        <Text style={{fontSize:20,fontWeight:'bold'}}>
+          Right Bulgarian Squat
+        </Text>
+        <FontAwesomeIcon
+        icon={faBars} size={25}/>
+        </View>
+        <Text>
+          _________________________________________________
+        </Text>
+      </View>
+
+     
+      <View>
+        <View style={{flexDirection:'row',justifyContent:'space-between',alignItems:'center',}}>
+        <Text style={{fontSize:20,fontWeight:'bold'}}>
+         Alternate Lunge Back And FORTH
+        </Text>
+        <FontAwesomeIcon
+        icon={faBars} size={25}/>
+        </View>
+        <Text>
+          _________________________________________________
+        </Text>
+      </View>
+
+     
+      <View>
+        <View style={{flexDirection:'row',justifyContent:'space-between',alignItems:'center',}}>
+        <Text style={{fontSize:20,fontWeight:'bold'}}>
+         Alternate Lunge Back And FORTH
+        </Text>
+        <FontAwesomeIcon
+        icon={faBars} size={25}/>
+        </View>
+        <Text>
+          _________________________________________________
+        </Text>
+      </View>
+
+     
+      <View>
+        <View style={{flexDirection:'row',justifyContent:'space-between',alignItems:'center',}}>
+        <Text style={{fontSize:20,fontWeight:'bold'}}>
+        Dynamic Stretch Of Inner Thigh
+        </Text>
+        <FontAwesomeIcon
+        icon={faBars} size={25}/>
+        </View>
+        <Text>
+          _________________________________________________
+        </Text>
+      </View>
+
+     
+      <View>
+        <View style={{flexDirection:'row',justifyContent:'space-between',alignItems:'center',}}>
+        <Text style={{fontSize:20,fontWeight:'bold'}}>
+        Left Arm Back Stretch
+        </Text>
+        <FontAwesomeIcon
+        icon={faBars} size={25}/>
+        </View>
+        <Text>
+          _________________________________________________
+        </Text>
+      </View>
+
+     
+      <View>
+        <View style={{flexDirection:'row',justifyContent:'space-between',alignItems:'center',}}>
+        <Text style={{fontSize:20,fontWeight:'bold'}}>
+        Right Arm Back Stretch
+        </Text>
+        <FontAwesomeIcon
+        icon={faBars} size={25}/>
+        </View>
+        <Text>
+          _________________________________________________
+        </Text>
+      </View>
+
+     
+      <View>
+        <View style={{flexDirection:'row',justifyContent:'space-between',alignItems:'center',}}>
+        <Text style={{fontSize:20,fontWeight:'bold'}}>
+       Supine Left Leg Back Stretch
+        </Text>
+        <FontAwesomeIcon
+        icon={faBars} size={25}/>
+        </View>
+        <Text>
+          _________________________________________________
+        </Text>
+      </View>
+
+     
+      <View>
+        <View style={{flexDirection:'row',justifyContent:'space-between',alignItems:'center',}}>
+        <Text style={{fontSize:20,fontWeight:'bold'}}>
+       Supine Right Leg Back Stretch
+        </Text>
+        <FontAwesomeIcon
+        icon={faBars} size={25}/>
+        </View>
+        <Text>
+          _________________________________________________
+        </Text>
+      </View>
+
+     
+
     
      </ScrollView>
      <View style={{justifyContent:'center',paddingTop:12,margin:12,}}>

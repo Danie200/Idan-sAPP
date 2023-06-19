@@ -9,15 +9,15 @@ import { TextInput,Button } from 'react-native-paper';
 import * as yup from 'yup';
 import { Formik } from "formik";
 import { auth } from "../settings/firebase";
-import { getAuth,onAuthStateChanged ,signInWithEmailAndPassword } from "firebase/auth";
+import { getAuth,onAuthStateChanged ,sendPasswordResetEmail} from "firebase/auth";
 
 const validationRules = yup.object({
   email:yup.string().required('you must fill this field').min(5).max(36),
-  password:yup.string().required().min(4)
+
 });
 
 
-export function Login ({navigation}) {
+export function Fpassword ({navigation}) {
   const image = {uri: 'https://images.pexels.com/photos/2092450/pexels-photo-2092450.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load'};
   const [appIsReady, setAppIsReady] = useState(false);
   const [eventActivityIndicator,seteventActivityIndicator]= useState(false);
@@ -59,32 +59,32 @@ export function Login ({navigation}) {
     <Formik
     initialValues={{ email: '',password:'' }}
     onSubmit={(values,action) =>{
-      seteventActivityIndicator(true);
-      signInWithEmailAndPassword(auth,values.email,values.password)
-      .then(() => onAuthStateChanged(auth,(user) => {setUid(user.uid)
-        navigation.navigate('Gender')}))
-        .catch(error => {
-          if (error.code == 'auth/invalid-email') {
-            seteventActivityIndicator(false);
-            Alert.alert(
-                'message',
-                'Invalid email/password',
-                [{text:'Try Again'}]
-            )
-        } else if (error.code == 'auth/wrong-password' || error.code == 'auth/user-not-found'){
+        seteventActivityIndicator(true);
+        sendPasswordResetEmail(auth,values.email)
+        .then
+        (() => {Alert.alert( 'message',
+        'your Reset Link Was Sent',
+        [{text:'go to Login',onPress:() => navigation.navigate('Login')}])})
+        .catch(error =>  {if (error.code == 'auth/invalid-email') {
           seteventActivityIndicator(false);
-        Alert.alert(
-            'message',
-            'invalid email/password',
-            [{text:'Try Again'}])
-        }else {
-          seteventActivityIndicator(false);
-            Alert.alert(
-                'message',
-                'Something Went Wrong',
-                [{text:'Dismiss'}])
-        }
-        })    
+          Alert.alert(
+              'message',
+              'Invalid email/password',
+              [{text:'Try Again'}]
+          )
+      } else if (error.code == 'auth/wrong-password' || error.code == 'auth/user-not-found'){
+        seteventActivityIndicator(false);
+      Alert.alert(
+          'message',
+          'invalid email/password',
+          [{text:'Try Again'}])
+      }else {
+        seteventActivityIndicator(false);
+          Alert.alert(
+              'message',
+              'Something Went Wrong',
+              [{text:'Dismiss'}])}
+      })
       }}
     validationSchema={validationRules}
   >
@@ -105,28 +105,13 @@ export function Login ({navigation}) {
             :null}
         </View>
         
-        <View>
-            <TextInput
-            label='password'
-            mode="flat"
-            style={style.input}
-            onChangeText={handleChange('password')}
-            onBlur={handleBlur('password')}
-            value={values.password}
-            secureTextEntry={true}
-            />
-            {touched.password && errors.password ?
-            <Text style={{color:'red'}}>
-              {errors.password}</Text>:null}
-        </View>
-        
         <View style={style.button}>
           <Button 
           buttonColor="purple"
           textColor="yellow"
           mode="contained"
           onPress={handleSubmit}>
-            Login
+           Submit
           </Button>
         </View>
 
@@ -134,17 +119,6 @@ export function Login ({navigation}) {
       </View>
     )}
   </Formik>
-            <View style={style.account}>
-                <TouchableOpacity onPress={() => navigation.navigate('FP')}>
-                <Text style={{color:'blue'}}>Forgottenpassword</Text>
-                </TouchableOpacity>
-            </View>
-            <View style={style.account}>
-                <Text style={{color:'blue'}}>Don't Have an account? </Text>
-                <TouchableOpacity onPress={() => navigation.navigate('Name')}>
-                    <Text style={style.sign}>Signup</Text>
-                </TouchableOpacity>
-            </View>
       </View>
   </SafeArea>
   </ImageBackground>
@@ -177,7 +151,7 @@ export function Login ({navigation}) {
       flexDirection:'row'
     },
     sign:{
-      color:'yellow'
+      color:'purple'
     },
     image: {
       flex: 1,
