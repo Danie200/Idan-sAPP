@@ -47,6 +47,30 @@ import { Pushup } from "./Pushup";
 import { Widearmpushup } from "./Widearmpushup";
 import { Tricepsdips } from "./Tricepsdips";
 import { Kneepushup } from "./kneepushup";
+import { CobraStretch } from "./cobrastretch";
+import { ChestStretch } from "./Cheststretch";
+import { Jj } from "./testJJ";
+import { TestTimer } from "./testTimer";
+import { PracticeJumpJack } from "./practiceJUMPJ";
+import { PracticeInclinePushup } from "./practiceIncline";
+import { InclineTimer } from "./inclineTimer";
+import { PracticePushup } from "./PracticePushup";
+import { PushUpTimer } from "./pushuptimer";
+import { Practicewide } from "./practicewide";
+import { WideTimer } from "./widetimer";
+import { TricepTimer } from "./ticeptimer";
+import { PracticeTriceps } from "./Practicetricep";
+import { PracticeKnee } from "./practiceknee";
+import { KneeTimer } from "./kneetimer";
+import { PracticeCobra } from "./PracticeCobra";
+import { CobraTimer } from "./cobratimer";
+import { PracticeChest } from "./PracticeChest";
+import { Secwide } from "./Secwide";
+import { SecwideTimer } from "./secwidetimer";
+import { Secincline } from "./secincline";
+import { SecInclineTimer } from "./secinclinetimer";
+import { SecTriceps } from "./sectricep";
+import { SecTricepTimer } from "./sectriceptimer";
 
   const Stack = createNativeStackNavigator();
 export function StackNavigation () {
@@ -100,6 +124,30 @@ export function StackNavigation () {
             <Stack.Screen name="Widearmpushup" component={Widearmpushup}/>
             <Stack.Screen name="Tricepdips" component={Tricepsdips}/>
             <Stack.Screen name="Kneepushup" component={Kneepushup}/>
+            <Stack.Screen name="CobraStretch" component={CobraStretch}/>
+            <Stack.Screen name="ChestStretch" component={ChestStretch}/>
+            <Stack.Screen name="Time" component={Jj}/>
+            <Stack.Screen name="Timer" component={TestTimer}/>
+            <Stack.Screen name="Pjumpjack" component={PracticeJumpJack}/>
+            <Stack.Screen name="Pinclinepushup" component={PracticeInclinePushup}/>
+            <Stack.Screen name="Tinclinepushup" component={InclineTimer}/>
+            <Stack.Screen name="Ppushup" component={PracticePushup}/>
+            <Stack.Screen name="Tpushup" component={PushUpTimer}/>
+            <Stack.Screen name="Pwide" component={Practicewide}/>
+            <Stack.Screen name="Twide" component={WideTimer}/>
+            <Stack.Screen name="Ptriceps" component={PracticeTriceps}/>
+            <Stack.Screen name="Ttriceps" component={TricepTimer}/>
+            <Stack.Screen name="Pknee" component={PracticeKnee}/>
+            <Stack.Screen name="TKnee" component={KneeTimer}/>
+            <Stack.Screen name="Pcobra" component={PracticeCobra}/>
+            <Stack.Screen name="Tcobra" component={CobraTimer}/>
+            <Stack.Screen name="Pchest" component={PracticeChest}/>
+            <Stack.Screen name="Secwide" component={Secwide}/>
+            <Stack.Screen name="Tsecwide" component={SecwideTimer}/>
+            <Stack.Screen name="secincline" component={Secincline}/>
+            <Stack.Screen name="Tsecincline" component={SecInclineTimer}/>
+            <Stack.Screen name="sectricep" component={SecTriceps}/>
+            <Stack.Screen name="Tsectricep" component={SecTricepTimer}/>
 
         </Stack.Navigator>
     )

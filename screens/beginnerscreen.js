@@ -104,7 +104,14 @@ const Tab = createBottomTabNavigator();
    
    <View style={{alignItems:'center',marginTop:10}}>
 <TouchableOpacity onPress={() => navigation.navigate('Bsb')}>
-        <View style={styles.advancedbox}>
+        <View style={{width:160,
+      height:100,
+      justifyContent:'center',
+      alignItems:'center',
+      backgroundColor:'#77037B',
+      borderRadius:10,
+      marginLeft:10,
+      padding:20}}>
           <View style={styles.advanced}>
               <Text style={{color:'yellow',fontSize:20,fontWeight:'bold'}}>
                 Shoulder&Back

@@ -94,11 +94,13 @@ export function Fpassword ({navigation}) {
         <View>
             <TextInput
             label="Email"
-            mode="flat"
+            mode='outlined'
             Style={style.input}
             onChangeText={handleChange('email')}
             onBlur={handleBlur('email')}
             value={values.email}
+            activeOutlineColor="black"
+            outlineColor="black"
             />
             {touched.email && errors.email ? 
             <Text style={{color:'red'}}>{errors.email}</Text>
@@ -107,8 +109,8 @@ export function Fpassword ({navigation}) {
         
         <View style={style.button}>
           <Button 
-          buttonColor="purple"
-          textColor="yellow"
+          buttonColor="black"
+          textColor="white"
           mode="contained"
           onPress={handleSubmit}>
            Submit

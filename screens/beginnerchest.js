@@ -60,9 +60,14 @@ export function Beginnerchest({navigation}) {
      <ScrollView showsVerticalScrollIndicator={false}>
       <View  style={{paddingTop:10}}>
         <View style={{flexDirection:'row',justifyContent:'space-between',alignItems:'center',}}>
-        <Text style={{fontSize:20,fontWeight:'bold'}}>
+          <View style={{flexDirection:'column'}}>
+        <Text style={{fontSize:20,fontWeight:'bold',}}>
           Jumping Jacks
         </Text>
+        <Text style={{fontSize:15,}}>
+          00:30
+        </Text>
+        </View>
         <TouchableOpacity onPress={() => navigation.navigate('Jumpingjacks')}>
         <FontAwesomeIcon
         icon={faBars} size={25}/>
@@ -75,9 +80,14 @@ export function Beginnerchest({navigation}) {
       
       <View>
         <View style={{flexDirection:'row',justifyContent:'space-between',alignItems:'center',}}>
+          <View style={{flexDirection:'column'}}>
         <Text style={{fontSize:20,fontWeight:'bold'}}>
         Incline push-ups
         </Text>
+        <Text style={{fontSize:15,}}>
+        x10
+        </Text>
+        </View>
         <TouchableOpacity onPress={() => navigation.navigate('Inclinepushup')}>
         <FontAwesomeIcon
         icon={faBars} size={25}/>
@@ -90,9 +100,14 @@ export function Beginnerchest({navigation}) {
 
       <View>
         <View style={{flexDirection:'row',justifyContent:'space-between',alignItems:'center',}}>
+          <View style={{flexDirection:'column'}}>
         <Text style={{fontSize:20,fontWeight:'bold'}}>
          Push-Ups
         </Text>
+        <Text style={{fontSize:20,}}>
+         x8
+        </Text>
+        </View>
         <TouchableOpacity onPress={() => navigation.navigate('Pushup')}>
         <FontAwesomeIcon
         icon={faBars} size={25}/>
@@ -105,9 +120,14 @@ export function Beginnerchest({navigation}) {
 
       <View>
         <View  style={{flexDirection:'row',justifyContent:'space-between',alignItems:'center',}}>
+          <View style={{flexDirection:"column"}}>
         <Text  style={{fontSize:20,fontWeight:'bold'}}>
         Wide Arm Push-Ups
         </Text>
+        <Text  style={{fontSize:20,}}>
+        x8
+        </Text>
+        </View>
         <TouchableOpacity onPress={() => navigation.navigate('Widearmpushup')}>
         <FontAwesomeIcon
         icon={faBars} size={25}/>
@@ -120,9 +140,14 @@ export function Beginnerchest({navigation}) {
 
       <View>
         <View style={{flexDirection:'row',justifyContent:'space-between',alignItems:'center',}}>
+          <View style={{flexDirection:'column'}}>
         <Text style={{fontSize:20,fontWeight:'bold'}}>
         Tricep Dips
         </Text>
+        <Text style={{fontSize:20,}}>
+          x10
+        </Text>
+        </View>
         <TouchableOpacity onPress={() => navigation.navigate('Tricepdips')}>
         <FontAwesomeIcon
         icon={faBars} size={25}/>
@@ -135,9 +160,14 @@ export function Beginnerchest({navigation}) {
 
       <View>
         <View style={{flexDirection:'row',justifyContent:'space-between',alignItems:'center',}}>
+          <View style={{flexDirection:"column"}}>
         <Text style={{fontSize:20,fontWeight:'bold'}}>
        Wide Arm Push-Ups
         </Text>
+        <Text style={{fontSize:20,}}>
+          x6
+        </Text>
+        </View>
         <TouchableOpacity onPress={() => navigation.navigate('Widearmpushup')}>
         <FontAwesomeIcon
         icon={faBars} size={25}/>
@@ -150,9 +180,14 @@ export function Beginnerchest({navigation}) {
 
       <View>
         <View style={{flexDirection:'row',justifyContent:'space-between',alignItems:'center',}}>
+          <View style={{flexDirection:"column"}}>
         <Text style={{fontSize:20,fontWeight:'bold'}}>
        Incline Push-Ups
         </Text>
+        <Text style={{fontSize:20,}}>
+        x8
+        </Text>
+        </View>
         <TouchableOpacity onPress={() => navigation.navigate('Inclinepushup')}>
         <FontAwesomeIcon
         icon={faBars} size={25}/>
@@ -165,9 +200,14 @@ export function Beginnerchest({navigation}) {
 
       <View>
         <View style={{flexDirection:'row',justifyContent:'space-between',alignItems:'center',}}>
+          <View style={{flexDirection:"column"}}>
         <Text style={{fontSize:20,fontWeight:'bold'}}>
         Triceps Dips
         </Text>
+        <Text style={{fontSize:20,}}>
+          x8
+        </Text>
+        </View>
         <TouchableOpacity onPress={() => navigation.navigate('Tricepdips')}>
         <FontAwesomeIcon
         icon={faBars} size={25}/>
@@ -180,9 +220,14 @@ export function Beginnerchest({navigation}) {
 
       <View>
         <View style={{flexDirection:'row',justifyContent:'space-between',alignItems:'center',}}>
+          <View style={{flexDirection:'column'}}>
         <Text style={{fontSize:20,fontWeight:'bold'}}>
        Knee Push-Ups
         </Text>
+        <Text style={{fontSize:20,}}>
+       x8
+        </Text>
+        </View>
         <TouchableOpacity onPress={() => navigation.navigate('Kneepushup')}>
         <FontAwesomeIcon
         icon={faBars} size={25}/>
@@ -195,11 +240,18 @@ export function Beginnerchest({navigation}) {
 
       <View>
         <View style={{flexDirection:'row',justifyContent:'space-between',alignItems:'center',}}>
+          <View style={{flexDirection:'column'}}>
         <Text style={{fontSize:20,fontWeight:'bold'}}>
        Cobra Stretch
         </Text>
+        <Text style={{fontSize:20,}}>
+          00:20
+        </Text>
+        </View>
+        <TouchableOpacity onPress={() => navigation.navigate('CobraStretch')}>
         <FontAwesomeIcon
         icon={faBars} size={25}/>
+        </TouchableOpacity>
         </View>
         <Text>
           _________________________________________________
@@ -208,11 +260,19 @@ export function Beginnerchest({navigation}) {
 
       <View>
         <View style={{flexDirection:'row',justifyContent:'space-between',alignItems:'center',}}>
+        <View style={{flexDirection:"columns"}}>
         <Text style={{fontSize:20,fontWeight:'bold'}}>
       Chest Stretch
         </Text>
+        <Text style={{fontSize:20,}}>
+        00:20
+        </Text>
+        </View>
+        
+        <TouchableOpacity onPress={() => navigation.navigate('ChestStretch')}>
         <FontAwesomeIcon
         icon={faBars} size={25}/>
+        </TouchableOpacity>
         </View>
         <Text>
           _________________________________________________
@@ -227,6 +287,7 @@ export function Beginnerchest({navigation}) {
           buttonColor="blue"
           textColor="black"
           mode='contained'
+          onPress={() => navigation.navigate('Time')}
           >
             Start
           </Button>

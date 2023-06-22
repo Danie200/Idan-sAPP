@@ -105,11 +105,13 @@ export function Name ({navigation}) {
         <View>
             <TextInput
             label="Email"
-            mode="flat"
+            mode='outlined'
             Style={style.input}
             onChangeText={handleChange('Email')}
             onBlur={handleBlur('Email')}
             value={values.Email}
+            outlineColor="black"
+            activeOutlineColor="black"
             />
             {touched.Email&& errors.Email? 
             <Text style={{color:'red'}}>{errors.Email}</Text>
@@ -119,11 +121,13 @@ export function Name ({navigation}) {
             <TextInput
             label="Password"
             textColor="black"
-            mode="flat"
+            mode='outlined'
             Style={style.input}
             onChangeText={handleChange('Password')}
             onBlur={handleBlur('Password')}
             value={values.Password}
+            outlineColor="black"
+            activeOutlineColor="black"
             />
             {touched.Password&& errors.Password? 
             <Text style={{color:'red'}}>{errors.Password}</Text>
@@ -132,11 +136,13 @@ export function Name ({navigation}) {
         <View >
             <TextInput
             label="PasswordConfirmation"
-            mode="flat"
+            mode='outlined'
             Style={style.input}
             onChangeText={handleChange('PasswordConfirmation')}
             onBlur={handleBlur('PasswordConfirmation')}
             value={values.PasswordConfirmation}
+            activeOutlineColor="black"
+            outlineColor="black"
             />
             {touched.PasswordConfirmation&& errors.PasswordConfirmation? 
             <Text style={{color:'red'}}>{errors.PasswordConfirmation}</Text>
@@ -145,20 +151,20 @@ export function Name ({navigation}) {
         
         <View style={style.button}>
           <Button 
-          textColor="yellow"
+          textColor="white"
           mode="contained"
-          style={{backgroundColor:'purple'}}
+          style={{backgroundColor:'black'}}
           onPress={handleSubmit}>
             Continue
           </Button>
         </View>
 
         <View style={style.inputt}>
-        <Text style={{color:'blue'}}>
+        <Text style={{color:'black',fontWeight:"bold"}}>
           ALREADY HAVE AN ACCOUNT?
         </Text>
         <TouchableOpacity onPress={() => navigation.navigate('Login')}>
-        <Text  style={{color:'yellow'}}>
+        <Text  style={{color:'blue',fontWeight:"bold"}}>
           Login
         </Text>
         </TouchableOpacity>

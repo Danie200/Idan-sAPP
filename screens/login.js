@@ -94,11 +94,13 @@ export function Login ({navigation}) {
         <View>
             <TextInput
             label="Email"
-            mode="flat"
+            mode='outlined'
             Style={style.input}
             onChangeText={handleChange('email')}
             onBlur={handleBlur('email')}
             value={values.email}
+            outlineColor="black"
+            activeOutlineColor="black"
             />
             {touched.email && errors.email ? 
             <Text style={{color:'red'}}>{errors.email}</Text>
@@ -108,12 +110,14 @@ export function Login ({navigation}) {
         <View>
             <TextInput
             label='password'
-            mode="flat"
+            mode='outlined'
             style={style.input}
             onChangeText={handleChange('password')}
             onBlur={handleBlur('password')}
             value={values.password}
             secureTextEntry={true}
+            activeOutlineColor="black"
+            outlineColor="black"
             />
             {touched.password && errors.password ?
             <Text style={{color:'red'}}>
@@ -122,8 +126,8 @@ export function Login ({navigation}) {
         
         <View style={style.button}>
           <Button 
-          buttonColor="purple"
-          textColor="yellow"
+          buttonColor="black"
+          textColor="white"
           mode="contained"
           onPress={handleSubmit}>
             Login
@@ -136,11 +140,11 @@ export function Login ({navigation}) {
   </Formik>
             <View style={style.account}>
                 <TouchableOpacity onPress={() => navigation.navigate('FP')}>
-                <Text style={{color:'blue'}}>Forgottenpassword</Text>
+                <Text style={{color:'blue',fontWeight:"bold"}}>Forgottenpassword</Text>
                 </TouchableOpacity>
             </View>
             <View style={style.account}>
-                <Text style={{color:'blue'}}>Don't Have an account? </Text>
+                <Text style={{color:'black',fontWeight:"bold"}}>Don't Have an account? </Text>
                 <TouchableOpacity onPress={() => navigation.navigate('Name')}>
                     <Text style={style.sign}>Signup</Text>
                 </TouchableOpacity>
@@ -177,7 +181,9 @@ export function Login ({navigation}) {
       flexDirection:'row'
     },
     sign:{
-      color:'yellow'
+      color:'blue',
+      fontWeight:"bold",
+      fontStyle:'italic'
     },
     image: {
       flex: 1,

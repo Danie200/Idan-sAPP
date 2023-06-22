@@ -1,6 +1,6 @@
 import { useContext, useEffect, useState } from "react";
 import { AppContext } from "../settings/gbVariables";
-import { StyleSheet,SafeAreaView,Image,View,Text} from "react-native";
+import { StyleSheet,SafeAreaView,Image,View,Text,Alert} from "react-native";
 import { Button } from "react-native-paper";
 import { db } from "../settings/firebase";
 import { getDoc,doc } from "firebase/firestore";
@@ -18,6 +18,11 @@ export function Profile ({navigation}) {
             setUserRecords(snapShot.data())  
         }
         handleGetUserRecords();
+        if (firstName == undefined) {
+         Alert.alert('message',
+         "You Haven't Created Your Profile",
+         [{text:'Go to Create Profile',onPress:()=>navigation.navigate('CreateProfile')}])
+        }
     },[])
     //console.log(userRecords);//delete after testing
     return ( 

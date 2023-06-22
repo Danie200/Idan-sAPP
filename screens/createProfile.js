@@ -27,7 +27,7 @@ export function CreateProfile ({navigation}) {
       return(
         <SafeArea>
                 <Text style={styles.title}>Create Profile </Text>
-                { eventActivityIndicator ? <ActivityIndicator size='small'/> :null}
+                { eventActivityIndicator ? <ActivityIndicator size='small'color='black'/> :null}
                 <Formik
                 initialValues={{fName:'',lName:'',Weight:'',Height:'',DOB:'', }}
     onSubmit={(values,action) =>{
@@ -67,7 +67,7 @@ export function CreateProfile ({navigation}) {
           <View style={styles.form}>
               <TextInput
               outlineColor="gray"
-              activeOutlineColor="blue"
+              activeOutlineColor="black"
               label="first name"
               mode="outlined"
               onChangeText={handleChange('fName')}
@@ -82,7 +82,7 @@ export function CreateProfile ({navigation}) {
           <View>
               <TextInput
               outlineColor="gray"
-              activeOutlineColor="blue"
+              activeOutlineColor="black"
               label="last name"
               mode="outlined"
               Style={styles.input}
@@ -98,13 +98,14 @@ export function CreateProfile ({navigation}) {
           <View>
               <TextInput
               outlineColor="gray"
-              activeOutlineColor="blue"
+              activeOutlineColor="black"
               label="Weight"
               mode="outlined"
               Style={styles.input}
               onChangeText={handleChange('Weight')}
               onBlur={handleBlur('Weight')}
               value={values.Weight}
+              keyboardType='numeric'
               />
               {touched.Weight&& errors.Weight ? 
               <Text style={{color:'red'}}>{errors.Weight}</Text>
@@ -114,13 +115,14 @@ export function CreateProfile ({navigation}) {
           <View>
               <TextInput
               outlineColor="gray"
-              activeOutlineColor="#5D9C59"
+              activeOutlineColor="black"
               label="Height"
               mode="outlined"
               Style={styles.input}
               onChangeText={handleChange('Height')}
               onBlur={handleBlur('Height')}
               value={values.Height}
+              keyboardType='numeric'
               />
               {touched.Height && errors.Height ? 
               <Text style={{color:'red'}}>{errors.Height}</Text>
@@ -130,8 +132,8 @@ export function CreateProfile ({navigation}) {
 
           <View style={styles.button}>
             <Button
-            buttonColor="blue"
-            textColor="black" 
+            buttonColor="black"
+            textColor="white" 
             mode="contained"
             onPress={handleSubmit}
             contentStyle={{paddingVertical:6}}
@@ -158,6 +160,6 @@ const styles = StyleSheet.create({
     },
     form:{
       flexDirection:'column',
-      gap:4
+      gap:4,
     }
   })
